@@ -3,8 +3,8 @@ package day01;
 public class TypeConvert {
     public static void main(String[] args) {
         int a = 100;
-        double b = a;
-        System.out.println("自动转换 int->double: " + b);
+//        double b = a;
+        System.out.println("自动转换 int->double: " + (double) a);
 
 
         double x = 9.99;

@@ -11,7 +11,7 @@ class Student{
         this.name = name;
         this.age = age;
         this.score = score;
-    }
+    }//构造器
 
     public String getName() {
         return name;
@@ -29,7 +29,7 @@ class Student{
 }
 public class OOPPractice {
     public static void main(String[] args) {
-        Student s1 =new Student("张三",20,85.5);
+        Student s1 =new Student("张三",20,85.5);//类是模板。对象是实例
         s1.introduce();
         Student s2 =new Student();
         s2.setName("李四");
@@ -39,3 +39,6 @@ public class OOPPractice {
         System.out.println(s1.getName()+"的成绩是"+s1.getScore());
     }
 }
+//为什么要封装？
+//1. 防垃圾数据：setter 里加校验，age 不能是负数、score 不能超 100；
+//2. 控制读写权限：只读字段只给 getter 不给 setter（比如学生 ID，创建后锁死）；

@@ -36,3 +36,5 @@ public class ExceptionPractice {
 
 //ArithmeticException e
 //e.getMessage()
+//ArithmeticException e
+//ArrayIndexOutOfBoundsException e

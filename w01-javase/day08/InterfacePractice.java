@@ -1,4 +1,4 @@
-package day8;
+package day08;
 
 interface Flyable{
     void fly();

@@ -12,12 +12,13 @@
 | IDE | IntelliJ IDEA 2026.1.3（中文界面） |
 | Git | 2.54.0，`C:\Program Files\Git\cmd`（已加入用户 PATH） |
 | Git 身份 | `pengfeiyang2006` / `feipfy@qq.com`（全局配置） |
-| MySQL | **仅保留一个实例：服务名 `MySQL80`，端口 3306** |
+| MySQL | **仅保留一个实例：服务名 `MySQL`，端口 3306**（安装路径 `C:\tools\mysql`） |
 | 数据库 | `device_db`（utf8mb4），表 `device` |
 | 仓库 | `D:\32-Java学习路线\java-roadmap` |
 | 远程 | https://github.com/pengfeiyang2006/java-roadmap （main） |
 
-> 约定：**所有数据库操作统一走 3306**。3307 那个实例已停用（服务 `MySQL` 设为手动启动），不要再连它。
+> 约定：**所有数据库操作统一走 3306。**
+> 端口对照：服务 `MySQL`（`C:\tools\mysql`）= 3306，**在用**；服务 `MySQL80`（官方安装）= 3307，已停止并设为手动启动，不要连。
 
 ## 二、从零恢复步骤
 
@@ -97,5 +98,5 @@ java -cp "..\out\production\java-roadmap;..\lib\mysql-connector-j-8.4.0.jar" day
 
 ## 六、已知的机器级配置（不要再踩）
 
-- `hosts` 文件曾被写入大量 `127.0.0.1 github.com` 条目，导致 git push 失败；已清理，备份在 `C:\Windows\System32\drivers\etc\hosts.bak.20261119`
-- 曾同时运行两个 MySQL 实例（3306 / 3307），已停用 3307，只留 3306
+- `hosts` 文件曾被写入大量 `127.0.0.1 github.com` 条目，导致 git push 失败；已清理并固定为可用 IP，备份在 `C:\Windows\System32\drivers\etc\hosts.bak.20261119`
+- 曾同时运行两个 MySQL 实例：`MySQL`（3306，在用）与 `MySQL80`（3307，已停用并设为手动启动）

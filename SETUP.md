@@ -14,7 +14,7 @@
 | Git 身份 | `pengfeiyang2006` / `feipfy@qq.com`（全局配置） |
 | MySQL | **仅保留一个实例：服务名 `MySQL`，端口 3306**（安装路径 `C:\tools\mysql`） |
 | 数据库 | `device_db`（utf8mb4），表 `device` |
-| 仓库 | `D:\32-Java学习路线\java-roadmap` |
+| 仓库 | `D:\Java\java-roadmap` |
 | 远程 | https://github.com/pengfeiyang2006/java-roadmap （main） |
 
 > 约定：**所有数据库操作统一走 3306。**
@@ -25,7 +25,7 @@
 ### 1. 拉取代码
 
 ```powershell
-git clone https://github.com/pengfeiyang2006/java-roadmap.git "D:\32-Java学习路线\java-roadmap"
+git clone https://github.com/pengfeiyang2006/java-roadmap.git "D:\Java\java-roadmap"
 ```
 
 ### 2. 打开 IDEA 并标记源码根
@@ -39,9 +39,9 @@ git clone https://github.com/pengfeiyang2006/java-roadmap.git "D:\32-Java学习�
 jar 不进仓库（`.gitignore` 已忽略 `*.jar`），需要手动下载到 `lib\`：
 
 ```powershell
-New-Item -ItemType Directory -Force "D:\32-Java学习路线\java-roadmap\lib"
+New-Item -ItemType Directory -Force "D:\Java\java-roadmap\lib"
 Invoke-WebRequest "https://repo1.maven.org/maven2/com/mysql/mysql-connector-j/8.4.0/mysql-connector-j-8.4.0.jar" `
-  -OutFile "D:\32-Java学习路线\java-roadmap\lib\mysql-connector-j-8.4.0.jar"
+  -OutFile "D:\Java\java-roadmap\lib\mysql-connector-j-8.4.0.jar"
 ```
 
 然后 IDEA 里右键该 jar → **Add as Library**。
@@ -53,13 +53,13 @@ Invoke-WebRequest "https://repo1.maven.org/maven2/com/mysql/mysql-connector-j/8.
 用 MySQL 命令行执行 `w01-javase/day13/device.sql`（把 `select version();` 那行去掉不影响）：
 
 ```powershell
-mysql -h 127.0.0.1 -P 3306 -u root -p --default-character-set=utf8mb4 < "D:\32-Java学习路线\java-roadmap\w01-javase\day13\device.sql"
+mysql -h 127.0.0.1 -P 3306 -u root -p --default-character-set=utf8mb4 < "D:\Java\java-roadmap\w01-javase\day13\device.sql"
 ```
 
 ### 5. 验证环境
 
 ```powershell
-cd "D:\32-Java学习路线\java-roadmap\w01-javase"
+cd "D:\Java\java-roadmap\w01-javase"
 javac -encoding UTF-8 -cp "..\lib\mysql-connector-j-8.4.0.jar" -d "..\out\production\java-roadmap" day14\JdbcDemo.java
 java -cp "..\out\production\java-roadmap;..\lib\mysql-connector-j-8.4.0.jar" day14.JdbcDemo
 ```
